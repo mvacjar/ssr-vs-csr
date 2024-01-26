@@ -111,10 +111,30 @@ In our project, the SSR and CSR apps will are working with an external API, so t
 ## Questions
 
 - What is the difference between SSR and CSR?
+  - SSR
+    - The initial rendering of the web page is done on the server side. This one sends fully rendered HTML to the client and the client receives a ready page, reducing the time to first render. Subsequent interactions might involve client-side rendering for dynamic content.
+  - CSR
+    - The initial HTML is minimal, and the bulk of rendering is donde on the client side using JS, so the client fetches data and updates the DOM dinamically. Finally, the initial load might be faster as only essential HMTL and scripst are sent from the server.
 - In what ways do you need to change your code to switch between CSR and SSR?
+  - CSR to SSR
+    - We move rendering logic anddata fetching to the server, we use frameworks or libraries thar supports server-side rendering and adjust routing to ve handled on the server side.
+  - SSR to CSR
+    - We transition rendering logic and data fetching to the client side, modify routes to be handled on the clien side, and consider optimizing for asynchronous data loading.
 - What are the advantages of SSR?
+  - We improve the initial load times, providing a fully renderer page on the initial load, reducing time to first paint and improving user experience.
+  - We have SEO benefits by searching engines can more easily index content from the server-rendered HTML.
+  - We performance on low-power devices by initializing rendering on the server.
 - What are the advantages of CSR?
+  - Faster subsequent page loads
+  - Better user interactions
+  - Scalability
 - What are the tradeoffs?
+- - SSR
+  - Higher server load
+  - Slower subsequent page loads
+- CSR
+  - Initial load time
+  - Performance on low-power devices
 
 ## Conclusion
 
